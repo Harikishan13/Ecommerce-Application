@@ -29,15 +29,15 @@ const OrderSummary = () => {
       <div className="font-semibold text-black space-y-2">
         <div className="flex justify-between">
           <span>Price</span>
-          <span>${getTotal().toFixed(2)}</span>
+          <span>₹{getTotal().toFixed(2)}</span>
         </div>
         <div className="flex justify-between">
           <span>Shipping Fee</span>
-          <span>${shipping.toFixed(2)}</span>
+          <span>₹{shipping.toFixed(2)}</span>
         </div>
         <div className="flex justify-between">
           <span>Tax (2%)</span>
-          <span>${tax.toFixed(2)}</span>
+          <span>₹{tax.toFixed(2)}</span>
         </div>
       </div>
 
@@ -45,7 +45,7 @@ const OrderSummary = () => {
 
       <div className="flex justify-between font-bold text-lg">
         <span>Total Amount:</span>
-        <span>${(getTotal() + tax + shipping).toFixed(2)}</span>
+        <span>₹{(getTotal() + tax + shipping).toFixed(2)}</span>
       </div>
     </div>
   );
